@@ -2,5 +2,5 @@
 A brand new tool to help with cargo 
 
 The highly advanced technology in Cargo.bat has revolutionized the use of cargo via the
-command line. Now world famous cargo.bat has won multiple awards for changing the Rust lang 
+command line. World famous cargo.bat has won multiple international awards for changing the Rust lang 
 for the better. 
