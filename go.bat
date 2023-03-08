@@ -7,7 +7,7 @@ echo 2. cargo build
 echo 3. cargo run
 echo 4. cargo test
 echo 5. cargo check
-echo 6. cargo clean
+echo 6. cargo cleanhttps://github.com/4rust/cargobat/blob/main/cargo.bat
 echo 7. cargo update
 echo 8. cargo doc
 echo 9. cargo publish
