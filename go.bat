@@ -1,3 +1,4 @@
+
 @echo off
 
 :menu
@@ -12,6 +13,9 @@ echo 7. cargo update
 echo 8. cargo doc
 echo 9. cargo publish
 echo 10. cargo install
+echo 11. rustc build
+echo 12. rustc run
+echo 13. Custom Command
 echo x. Exit
 
 set /p choice=Enter a command:
@@ -26,6 +30,9 @@ if "%choice%"=="7" goto cargo_update
 if "%choice%"=="8" goto cargo_doc
 if "%choice%"=="9" goto cargo_publish
 if "%choice%"=="10" goto cargo_install
+if "%choice%"=="11" goto rustc_build
+if "%choice%"=="12" goto rustc_run
+if "%choice%"=="13" goto custom_command
 if /i "%choice%"=="x" goto exit
 
 echo Invalid choice. Press any key to return to the menu.
@@ -109,6 +116,32 @@ goto menu
 cls
 echo Running cargo install...
 cargo install
+echo Press any key to return to the menu.
+pause >nul
+goto menu
+
+:rustc_build
+cls
+echo Running rustc build...
+rustc main.rs
+echo Press any key to return to the menu.
+pause >nul
+goto menu
+
+:rustc_run
+cls
+echo Running rustc run...
+rustc main.rs -o main.exe
+.\main.exe
+echo Press any key to return to the menu.
+pause >nul
+goto menu
+
+:custom_command
+cls
+set /p cmd=Enter a custom cargo or rustc command:
+echo Running %cmd%...
+%cmd%
 echo Press any key to return to the menu.
 pause >nul
 goto menu
